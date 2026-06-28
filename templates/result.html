@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/style.min.css">
+    <style>
+        body { background: #121214; color: #fff; font-family: sans-serif; text-align: center; padding-top: 10%; }
+        .result-box { background: #1e1e24; border-radius: 12px; padding: 40px; display: inline-block; }
+        .FAKE { color: #ff4a5a; font-weight: bold; }
+        .REAL { color: #2ecc71; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Forensic Analysis Completed</h2>
+        <div class="result-box mt-4">
+            <h3 class="mb-3">Classification Status:{{result}}</h3>
+            <h1 class="{{ 'FAKE' if 'FAKE' in label else 'REAL' }}">{{ label }}</h1>
+            <h4 class="text-muted mt-3">Confidence Rating: {{ confidence }}100%</h4>
+            <a href="/" class="btn btn-outline-light mt-4">Verify Another File</a>
+        </div>
+    </div>
+</body>
+</html>
